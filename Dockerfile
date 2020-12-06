@@ -15,6 +15,8 @@ RUN apk add --no-cache --update --virtual .build-deps \
 COPY fluent.conf /fluentd/etc/
 #COPY entrypoint.sh /bin/
 
-
+ENV AWS_REGION="us-east-1"
+ENV AWS_ACCESS_KEY_ID="YOUR_ACCESS_KEY"
+ENV AWS_SECRET_ACCESS_KEY="YOUR_SECRET_ACCESS_KEY"
 
 USER fluent
